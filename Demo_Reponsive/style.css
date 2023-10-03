@@ -1,0 +1,650 @@
+/*
+   - responsive web la 1 web co nhieu giao dien (hay noi cach khac viet css cho nhieu man hinh(pc,tablet,phone)
+
+    giao dien phone < 730 < giao dien 2 < 1023 < : giao dien pc va thu nho lai
+
+   - pc: -> giao dien pc : 0 -  vo cung
+   - tablet: -> giao dien : 0 - 992
+   - phone: 0-768
+
+   
+    - 1023 <: giao dien pc, giu nguyen va bop nho lai
+    - < 1023 : bien doi sang  giao dien 2 :tablet
+    - < 730: bien doi sang 3:  phone;
+
+    */
+    
+
+    /*man hinh chinh*/
+    /*0-vo cung*/
+
+    
+    
+   
+    /*ul.media_list li:first-child: chon the li dau tien
+    ul.media_list li:last-child: cuoi cung
+    ul.media_list li:nth-child(2): the thu 2
+    ul.media_list li:nth-child(2n + 1): le 
+    ul.media_list li:nth-child(2n + 2): chan*/
+    
+
+    
+    /*toa giao chinh hoan chinh*/
+/*    quy tac thu nho lai:*/
+
+    /*chuyen width the cha sang max-width va width:100%*/
+
+*{
+    margin: 0;
+    border: none;
+    padding: 0;
+    list-style: none;
+}
+/* HEADER */
+.header{
+    width: 100%;
+
+    height: 54px;
+    background-color: bisque;
+    display: block;
+    margin: 0 auto;
+}
+
+.content-header{
+    max-width: 1023px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.logo{
+    width: 10%;
+    float: left;
+}
+.logo li{
+    width: 100px;
+}
+.logo li span{
+    font-size: 6px;
+}
+.logo li img{
+    width: 100%;
+}
+
+.menu-header{
+    width: 81%;
+    height: 54px;
+    display: inline-block;
+    text-align: center;
+}
+.menu-header li{
+    width: 80px;
+    padding-top: 20px;
+    display: inline-block;
+}
+
+.timkiem{
+    float: right;
+    width: 9%;
+    padding-top: 10px;
+}
+.timkiem li{
+    width: 34px;
+    display: inline-block;
+}
+.timkiem li img{
+    width: 100%;
+}
+/* Content - 1 */
+.content-1{
+    max-width: 1000px;
+ 
+    width: 100%;
+    height: 530px;
+    display: block;
+    margin: 0 auto;
+}
+.content-1-left{
+    width: 300px;
+    float: left;
+}
+.content-1-left li{
+    width: 280px;
+    height: 95px;
+    border-bottom: solid gray 1px;
+    margin-bottom: 10px;
+}
+.content-1-left li:last-child{
+    border: none;
+}
+.content-1-left li p{
+    font-weight: bold;
+}
+.content-1-left li img{
+    width: 120px;
+    height: 80px;
+    float: left;
+}
+
+.content-1-right{
+    width: 70%;
+    float: right;
+}
+.content-1-right li:first-child{
+    width: 64%;
+}
+.content-1-right li:first-child img{
+    width: 100%;
+}
+.content-1-right li:first-child h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.content-1-right li{
+    width: 34%;
+    float: left;
+    margin-left: 1%;
+}
+.content-1-right li img{
+    width: 100%;
+}
+
+/* BOOKS */
+
+.book{
+    clear: both;
+    max-width: 1000px;
+
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.book h3{
+    border-bottom: solid gray 1px;
+}
+
+.book-list{
+    width: 100%;
+}
+
+.book ul li{
+    width: 18%;
+    border: solid gray 1px;
+    border-radius: 2%;
+    padding-bottom: 10px;
+}
+.book ul li p{
+    margin-left: 10px;
+}
+.book ul li img{
+    width: 100%;
+    
+}
+
+.book-list{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* BOOK 2 */
+.book-2{
+    max-width: 1000px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.book-list-2-left{
+    width: 99%;
+}
+.book-list-2-left li{
+    width: 100%;
+    float: left;
+    margin-bottom: 2%;
+}
+.book-list-2-left li img{
+    width: 195px;
+    float: left;
+}
+/* MAIN */
+.main{
+    clear: both;
+    /* kích thước tối đa */
+    max-width: 1060px;
+
+    /* khi kéo nhỏ thì sẽ là 100% */
+    width: calc(100% - 60px);
+    padding: 30px;
+    display: block;
+    margin: 0 auto;
+    background-color: darksalmon;
+} 
+ul.media_list{
+    /* kích thước ul = thẻ cha ( div.main ) */
+    width: 100%;
+    display: inline-block;
+}
+
+ul.media_list li{
+    /* kích thước khi kéo nhỏ */
+    width: 23%;
+
+    /* chưa hiểu */
+    /* width li đầu + 2 phần li tiếp theo = 97 thiếu 3% , 3% / 2 = 1.5% */
+    margin-left: 1.5%;
+    float: left;
+}
+
+/* Chọn thẻ li đầu tiên */
+ul.media_list li:first-child{
+    /* kich thuoc khi keo nho */
+    width: 47%;
+    margin-left: 0;
+}
+
+ul.media_list li img{
+    /* = với kích thước li */
+    width: 100%;
+}
+
+
+
+/* main-2 */
+.main-2{
+    /* kích thước tối đa */
+    max-width: 1000px;
+    
+    /* kích thước khi thu nhỏ */
+    width: 100%;
+    height: 583px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* lifestyle-list-left */
+.lifestyle-list-left{
+    width: 71%;
+
+    /* kích thước khi thu nhỏ */
+
+    float: left;
+    border-right: solid dimgray 1px;
+}
+.lifestyle-list-left li:first-child{
+    width: 66%;
+    margin-left: 0;
+}
+
+.lifestyle-list-left li{
+    width: 221px;
+    margin-left: 10px;
+
+    float: left;
+}
+.lifestyle-list-left li img{
+    width: 100%;
+}
+
+/* lifestyle-list-right */
+.lifestyle-list-right{
+    width: 28%;
+    float: right;
+}
+
+.lifestyle-list-right li{
+    width: 264px;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: solid cornflowerblue 1px;
+}
+
+.lifestyle-list-right li img{
+    float: left;
+    width: 72px;
+    padding-right: 10px;
+}
+
+/* lấy li cuối cùng main 2*/
+
+.lifestyle-list-right li:last-child{
+    border-bottom: none;
+}
+
+/* main 3 */
+.main-3{
+    max-width: 1000px;
+
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.list-main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-new{
+    width: 24%;
+}
+/* css li đầu tiên */
+.list-new li:first-child{
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+.list-new li{
+    width: 235px;
+    height: 90px;
+    padding-top: 10px;
+    border-top: solid slategrey 1px;
+}
+.list-new li:first-child img{
+    width: 100%;
+}
+
+.list-new li img{
+    width: 105px;
+    float: left;
+    padding-right: 5px;
+}
+
+.main-3 h3{
+    text-transform: uppercase;
+}
+
+
+/* css VIDEO */
+.video{
+    max-width: 1000px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.video-list-left{
+    float: left;
+    width: 69%;
+}
+.video-list-left li{
+    width: 100%;
+    
+}
+.video-list-left li img{
+    width: 100%;
+}
+
+.video-list-right{
+    float: right;
+    width: 300px;
+}
+.video-list-right li{
+    width: 100%;
+    padding-bottom: 20px;
+    float: left;
+    border-bottom: solid gray 1px;
+    margin-bottom: 20px;
+}
+.video-list-right li:last-child{
+    border: none;
+}
+.video-list-right li img{
+    width: 120px;
+    float: left;
+    margin-right: 10px;
+}
+
+
+/* FOOOTER */
+.footer{
+    width: 100%;
+    background-color: aqua;
+    display: inline-block;
+    margin: 0 auto;
+}
+.content-footer{
+    max-width: 1000px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.content-footer-left{
+    width: 48%;
+    float: left;
+}
+.content-footer-left li{
+    width: 100%;
+}
+.content-footer-left li img{
+    width: 100px;
+}
+.content-footer-left li span{
+    float: left;
+    font-size: 15px;
+}
+
+.hotline{
+    width: 35%;
+    float: right;
+    padding-top: 40px;
+}
+.hotline li span{
+    font-size: 10px;
+}
+/* 0-1023 */
+@media only screen and (max-width: 1023px){
+
+    /* header thay đổi */
+    ul.menu-header li:nth-child(1),
+    ul.menu-header li:nth-child(2),
+    ul.menu-header li:nth-child(3),
+    ul.menu-header li:nth-child(4),
+    ul.menu-header li:nth-child(5),
+    ul.menu-header li:nth-child(6),
+    ul.menu-header li:nth-child(7){
+        display: none;
+    }
+    ul.menu-header{
+        width: 50%;
+        float: left;
+    }
+    ul.menu-header li:last-child{
+        float: left;
+    }
+    .logo{
+        width: 10%;
+    }
+    .logo li{
+        width: 99%;
+    }
+
+    .timkiem li{
+        width: 41%;
+    }
+    /* Content - 1 thay doi */
+
+    .content-1-left{
+        float: right;
+        width: 39%;
+    }
+    .content-1-left li{
+        width: 87%;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .content-1-right{
+        width: 58%;
+        float: left;
+    }
+    .content-1-right li:first-child{
+        width: 100%;
+    }
+    .content-1-right li{
+        width: 49%;
+        margin-left: 1%;
+    }
+    /* main 1 thay đổi */
+    ul.media_list li:first-child{
+        width: 100%;
+    }
+    ul.media_list li{
+        width: 49%;
+        margin-left: 0;
+    }
+    /* chọn thẻ li lẻ */
+    ul.media_list li:nth-child(3),
+    ul.media_list li:nth-child(5){
+        margin-left: 2%;
+    }
+
+    /* BOOK THAY ĐỔI */
+    .book-list{
+        width: 100%;
+    }    
+
+    /* BOOK -2 */
+    .book-list-2-left{
+        width: 100%;
+    }
+    
+    /* VIDEO THAY ĐỔI */
+    .video-list-left{
+        width: 100%;
+    }
+    .video-list-right{
+        width: 100%;
+        float: left;
+        display: flex;
+        justify-content: space-between;
+    }
+    .video-list-right li{
+        margin-right: 5px;
+        padding-top: 5px;
+        border: none;
+    }
+    .video-list-right li img{
+        width: 100%;
+    }
+}
+
+/* 0-988 */
+@media only screen and (max-width :988px){
+    /* LIFESTYLE */
+    .lifestyle-list-left{
+        width: 100%;
+    }
+    .lifestyle-list-left li{
+        width: 32%;
+    }
+    .lifestyle-list-right{
+        width: 100%;
+        float: left;
+    }
+    .lifestyle-list-right li{
+        width: 49%;
+        height: 97px;
+        display: inline-block;
+        border: none;
+    }
+    .lifestyle-list-right li img{
+        width: 72px;
+        height: 72px;
+        float: right;
+        margin-right: 10px;
+    }
+    /* main 3 thay đổi */
+    .list-main{
+        display: inline-block;
+    }
+    .list-new{
+        display: inline-block;
+        width: 49%;
+    }
+    .list-new li{
+        width: 100%;
+    }
+    .list-new li:first-child{
+        display: inline-block;
+        width: 100%;
+        height: 90px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .list-new li:first-child img{
+        width: 105px;
+    }
+
+    /* BOOK */
+    .book ul li{
+        width: 30%;
+    }
+    .book-list li:nth-child(4),
+    .book-list li:nth-child(5){
+        
+        display: none;
+    }
+}
+
+/* 0-700 */
+@media only screen and (max-width: 700px){
+    /* LIFESTYLE THAY ĐỔI */
+    .lifestyle-list-left li:first-child{
+        width: 100%;
+    }
+    .lifestyle-list-left li:first-child img{
+        width: 100%;
+    }
+    .lifestyle-list-lef{
+        border: none;
+    }
+    .lifestyle-list-left li{
+        width: 48%;
+        margin-left: 2%;
+    }
+    .lifestyle-list-right{
+        width: 100%;
+        padding-top: 10px;
+    }
+    .lifestyle-list-right li{
+        width: 100%;
+        border-bottom: solid cyan 1px;
+    }
+    /* CONTENT 1 */
+    .content-1-right{
+        width: 100%;
+    }
+    .content-1-left{
+        width: 100%;
+        
+    }
+    .content-1-left li{
+        width: 100%;
+        height: 156px;
+    }
+    .content-1-left li p{
+        font-size: 20px;
+    }
+    .content-1-left li img{
+        width: 210px;
+        height: 156px;
+        margin-right: 10px;
+    }
+
+    /* FOOTER */
+    .content-footer{
+        text-align: center;
+    }
+    .content-footer-left{
+        width: 100%;
+    }
+    .content-footer-left li{
+        width: 100%;
+    }
+    .hotline{
+        width: 100%;
+        padding: 0;
+    }
+}
+
